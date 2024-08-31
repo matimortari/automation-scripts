@@ -5,7 +5,7 @@ $projectName = Read-Host -Prompt "Enter the name for the project"
 $repoName = Read-Host -Prompt "Enter the name for the GitHub repository"
 
 # Create a new Vite project using the boilerplate repository
-git clone https://github.com/w11dcard/boilerplate-vite $projectName
+git clone https://github.com/matimortari/boilerplate-vite $projectName
 Set-Location $projectName
 
 # Create & install necessary files

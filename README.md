@@ -11,7 +11,7 @@ PowerShell scripts for automating repetitive development tasks.
 
 ## Getting Started
 
-1. Clone this repository: `git clone https://github.com/w11dcard/automation-scripts .`
+1. Clone this repository: `git clone https://github.com/matimortari/automation-scripts .`
 2. Set environment variable for **GITHUBTOKEN**.
 3. Set environment variables for each script for accessing them from the terminal.
 4. Run the scripts, replacing **SCRIPTNAME** with the script you want to execute: `& $env:SCRIPTNAME`
@@ -22,5 +22,5 @@ PowerShell scripts for automating repetitive development tasks.
 Feel free to reach out to discuss collaboration opportunities or to say hello!
 
 - [My Email](mailto:matheus.felipe.19rt@gmail.com)
-- [My LinkedIn Profile](https://www.linkedin.com/in/matheus-mortari-19rt/)
-- [My GitHub Profile](https://github.com/w11dcard)
+- [My LinkedIn Profile](https://www.linkedin.com/in/matheus-mortari-19rt)
+- [My GitHub Profile](https://github.com/matimortari)

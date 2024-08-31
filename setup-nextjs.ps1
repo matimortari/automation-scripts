@@ -5,7 +5,7 @@ $projectName = Read-Host -Prompt "Enter the name for the project"
 $repoName = Read-Host -Prompt "Enter the name for the GitHub repository"
 
 # Create a new Next.js project using the boilerplate repository
-git clone https://github.com/w11dcard/boilerplate-nextjs $projectName
+git clone https://github.com/matimortari/boilerplate-nextjs $projectName
 Set-Location $projectName
 
 # Create & install necessary files 
