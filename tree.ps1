@@ -1,5 +1,6 @@
 # Display a tree structure of the current folder, excluding directories that are too large to display it efficiently.
 
+# Initialize variables
 $source = Get-Location
 $treeOutput = "$source\tree-output"
 
@@ -8,7 +9,7 @@ if (Test-Path -Path $treeOutput) { Remove-Item -Recurse -Force -Path $treeOutput
 New-Item -ItemType Directory -Path $treeOutput
 
 # Copy the directory, excluding the specified directories
-robocopy $source $treeOutput /E /XD node_modules .next dist
+robocopy $source $treeOutput /E /XD node_modules dist .git
 
 # Run the tree command to display the directory structure
 Set-Location $treeOutput

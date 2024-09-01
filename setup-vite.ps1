@@ -1,19 +1,18 @@
 # Quickstart a Vite-powered website.
 
-# Prompt for project & repository name
+# Initialize variables from user input
 $projectName = Read-Host -Prompt "Enter the name for the project"
 $repoName = Read-Host -Prompt "Enter the name for the GitHub repository"
 
-# Create a new Vite project using the boilerplate repository
+# Create new Vite project & install dependencies
 git clone https://github.com/matimortari/boilerplate-vite $projectName
 Set-Location $projectName
 
-# Create & install necessary files
 Remove-Item .git, README.md -Recurse -Force
 New-Item README.md, .env.local, .env.production
 npm install --verbose
 
-# Create a new GitHub repository for the project
+# Initialize Git repository for the project
 git init
 
 $jsonData = @{

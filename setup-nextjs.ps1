@@ -1,19 +1,18 @@
 # Quickstart a Next.js-powered website.
 
-# Prompt for project & repository name
+# Initialize variables from user input
 $projectName = Read-Host -Prompt "Enter the name for the project"
 $repoName = Read-Host -Prompt "Enter the name for the GitHub repository"
 
-# Create a new Next.js project using the boilerplate repository
+# Create new Next.js project & install dependencies
 git clone https://github.com/matimortari/boilerplate-nextjs $projectName
 Set-Location $projectName
 
-# Create & install necessary files 
 Remove-Item .git, README.md -Recurse -Force
 New-Item README.md, .env.local, .env.production
 npm install --verbose
 
-# Create a new GitHub repository for the project
+# Initialize Git repository for the project
 git init
 
 $jsonData = @{
