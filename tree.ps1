@@ -1,20 +1,20 @@
-# Display a tree structure of the current folder, excluding directories that are too large to display it efficiently.
-
 # Initialize variables
 $source = Get-Location
-$treeOutput = "$source\tree-output"
+$treeOutput = "$source\out"
 
 # Ensure the temporary directory is empty, then create it
 if (Test-Path -Path $treeOutput) { Remove-Item -Recurse -Force -Path $treeOutput }
 New-Item -ItemType Directory -Path $treeOutput
 
-# Copy the directory, excluding the specified directories
-robocopy $source $treeOutput /E /XD node_modules dist .git
+# Copy the directory, excluding the specified directories (and tree-output)
+robocopy $source $treeOutput /E /XD node_modules dist .git tree-output
 
 # Run the tree command to display the directory structure
 Set-Location $treeOutput
 tree /f
 
-# Clean up the temporary directory
+# Change back to the original directory before attempting cleanup
 Set-Location $source
+
+# Clean up the temporary directory
 Remove-Item -Recurse -Force -Path $treeOutput
